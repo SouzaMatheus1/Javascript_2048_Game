@@ -1,8 +1,8 @@
 let model = [
-    [0, 2, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0],
-    [0, 0, 0, 0]
+    [0, 0, 0, 0],
+    [0, 0, 0, 2]
 ]
 
 function draw()
@@ -60,7 +60,7 @@ function drawSquare(ctx, value, i, j)
         return
 
     ctx.fillStyle = "rgb(0, 0, 0)"; 
-    ctx.font = '48px serif';
+    ctx.font = '72px Mada';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(value, x + 50, y + 50);
@@ -84,6 +84,7 @@ document.addEventListener('keydown', function(event)
     {
         up();
     }
+
 });
 
 function down()
@@ -266,7 +267,11 @@ function addNew()
 }
 
 function end(){
-    if (model [j][i] == 0){
-        return "Perdeu";
-    }else{return "Ganhou";}
+    for (var i=0; i < 4; i++){
+        for (var j=0; j<4; j++){
+            if (model[j][i] != 0){
+                console.log("Perdeu");
+            }
+        }
+    }
 } 
