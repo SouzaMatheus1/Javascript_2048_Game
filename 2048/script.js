@@ -1,13 +1,13 @@
 let model = [
     [0, 2, 0, 0],
-    [0, 2, 0, 0],
-    [0, 2, 0, 2],
-    [0, 2, 0, 0]
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
 ]
 
 function draw()
 {
-    setInterval(onframe, 100);
+    setInterval(onframe, 1000);
 }
 
 function onframe()
@@ -264,3 +264,9 @@ function addNew()
         }
     }
 }
+
+function end(){
+    if (model [j][i] == 0){
+        return "Perdeu";
+    }else{return "Ganhou";}
+} 
